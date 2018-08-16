@@ -1,0 +1,87 @@
+.titulo {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.btn-group {
+    position: fixed;
+    width: 100%;
+    margin-left: 91.8%;
+}
+.navbar-brand {
+    margin-left: 45%;
+}
+
+#bodyIndex{
+    background-color: gray;
+}
+
+#btnStart {
+    position: absolute;
+    /*margin-top: 15%;
+    margin-left: 35%;*/
+    width: 20%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    color:#000; 
+    font-weight: bold;
+    position: absolute;
+	left: 39.4%;
+    top: 60%;
+}
+#h1Index {
+    font-size: 85px;
+    margin-top: 13%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+table {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+/*th {
+    text-align: center;
+}*/
+#titleRodada {
+    text-align: center;
+}
+#tableCadastro {
+    margin-top: 3%;
+}
+#thMenor {
+    width: 5%;
+}
+/*Página Cadastro.html*/
+#divEsquerda {
+    display: inline-block;
+    width: 45%;
+}
+#divDireita {
+    float: right;
+    width: 50%;
+}
+/*Página Lutas.html*/
+#divLuEsquerda {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+#divLuCentro {
+    float: center;
+    width: 40%;
+    text-align: center;
+}
+#divLuDireita {
+    float: right;
+    width: 30%;
+    text-align: center;
+}
