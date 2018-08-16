@@ -1,15 +1,15 @@
 
-var nome, lutador,competidor,competidores = [];
+var nome, lutador, competidor, competidores = [];
 
 form = document.querySelector('form');
-tbody = document.querySelector('tbody');    
-    
-function limparCamposDoForm(){
+tbody = document.querySelector('tbody');
+
+function limparCamposDoForm() {
 
 }
 
-function adicionarCompetidorAListaDeCompetidores(){
-    
+function adicionarCompetidorAListaDeCompetidores() {
+
     tr = document.createElement('tr');
 
     roboTd = document.createElement('td');
@@ -20,8 +20,8 @@ function adicionarCompetidorAListaDeCompetidores(){
     editaI = document.createElement('i');
     removeI = document.createElement('i');
     
-    editaI.classList.add("far fa-edit");
-    removeI.classList.add("far fa-trash-alt");
+    editaI.classList.add('far', 'fa-edit');
+    removeI.classList.add('fa', 'fa-trash-alt');
 
     roboTd.textContent = form.robo.value;
     equipeTd.textContent = form.equipe.value;
@@ -35,13 +35,13 @@ function adicionarCompetidorAListaDeCompetidores(){
     tr.appendChild(removeTd);
 
     tbody.appendChild(tr);
-    
-    
+
+
 }
 
-document.getElementById('cadastrar').addEventListener('click',function(event){
+document.getElementById('cadastrar').addEventListener('click', function (event) {
     event.preventDefault();
-    if(form.robo.value != '' && form.equipe.value != ''){
+    if (form.robo.value != '' && form.equipe.value != '') {
         adicionarCompetidorAListaDeCompetidores();
         form.reset();
     }
