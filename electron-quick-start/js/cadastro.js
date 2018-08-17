@@ -1,48 +1,23 @@
+var corpo = document.getElementById('corpo');
 
-var nome, lutador, competidor, competidores = [];
-
-form = document.querySelector('form');
-tbody = document.querySelector('tbody');
-
-function limparCamposDoForm() {
-
-}
-
-function adicionarCompetidorAListaDeCompetidores() {
-
-    tr = document.createElement('tr');
-
-    roboTd = document.createElement('td');
-    equipeTd = document.createElement('td');
-    editaTd = document.createElement('td');
-    removeTd = document.createElement('td');
-
-    editaI = document.createElement('i');
-    removeI = document.createElement('i');
+function save(){
+    nameEquipe = document.getElementById('inputEquipe').value.toString();
+    nameRobo = document.getElementById('inputRobo').value.toString();
     
-    editaI.classList.add('far', 'fa-edit');
-    removeI.classList.add('fa', 'fa-trash-alt');
+    localStorage.setItem(nameRobo,nameEquipe);
 
-    roboTd.textContent = form.robo.value;
-    equipeTd.textContent = form.equipe.value;
+    document.getElementById('inputRobo').value = "";
+    document.getElementById('inputEquipe').value = "";
 
-    editaTd.appendChild(editaI);
-    removeTd.appendChild(removeI);
-
-    tr.appendChild(roboTd);
-    tr.appendChild(equipeTd);
-    tr.appendChild(editaTd);
-    tr.appendChild(removeTd);
-
-    tbody.appendChild(tr);
-
-
+    criarElemento();
 }
 
-document.getElementById('cadastrar').addEventListener('click', function (event) {
-    event.preventDefault();
-    if (form.robo.value != '' && form.equipe.value != '') {
-        adicionarCompetidorAListaDeCompetidores();
-        form.reset();
-    }
-});
+function criarElemento() {
+    corpo.innerHTML = [
+        '<tr>' +
+        '<td>' + nameRobo + '</td>' +
+        '<td>' + nameEquipe + '</td>' +
+        '<td><a href="#">Editar</a></td>' +
+        '<td><a href="#">Excluir</a></td>' 
+    ]
+}
