@@ -45,7 +45,7 @@
     <div class="container">
         <h1 class="titulo">Cadastrar Robô</h1>
     <div id="divEsquerda" class="container" style="padding-top: 20px;">
-        <form>
+        <form id="frmCadastro">
             <div class="form-group">
                 <label for="lblRobo">Nome do Robô: </label>
                 <input type="text" name="robo" class="form-control" id="inputRobo" placeholder="Robô" required>
@@ -55,11 +55,12 @@
                 <input type="text" name="equipe" class="form-control" id="inputEquipe" placeholder="Equipe" required>
             </div>
             <!--<button id="cadastrar" class="btn btn-primary">Cadastrar</button>-->
-            <input type="button" class="btn btn-primary" value="Cadastrar" onClick="save()">
+            <input type="submit" class="btn btn-primary" value="Cadastrar"> <!--onClick="save()"-->
         </form>
     </div>
     <div id="divDireita" class="container">
-        <table id="tableCadastro" class="table table-hover">
+        <table id="tblListar" class="table table-hover"> </table>
+        <!--<table id="tblListar" class="table table-hover">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Robô</th>
@@ -71,7 +72,7 @@
             <tbody id="corpo">
                 
             </tbody>
-        </table>
+        </table>-->
     </div>
     </div>
 
