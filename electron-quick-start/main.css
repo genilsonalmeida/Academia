@@ -49,6 +49,9 @@ td {
     text-align: center;
 }
 th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
     text-align: center;
 }
 #titleRodada {
