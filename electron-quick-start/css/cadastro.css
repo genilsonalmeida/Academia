@@ -1,0 +1,49 @@
+table {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+.navbar-brand {
+    margin-left: 45%;
+}
+.titulo {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#divEsquerda {
+    display: inline-block;
+    width: 45%;
+}
+#divDireita {
+    float: right;
+    width: 50%;
+}
+#btnFinalizar {
+    margin-top: 2%;
+    margin-left: 44.5%;
+    margin-bottom: 1%;
+    color: white;
+}
+#tableCadastro {
+    margin-top: 3%;
+}
+.btn-group {
+    position: fixed;
+    width: 100%;
+    margin-left: 91.8%;
+}

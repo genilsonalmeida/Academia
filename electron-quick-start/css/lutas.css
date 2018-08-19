@@ -1,0 +1,50 @@
+table {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+.navbar-brand {
+    margin-left: 45%;
+}
+#divLuEsquerda {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+#divLuCentro {
+    float: center;
+    width: 40%;
+    text-align: center;
+}
+#divLuDireita {
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+.titulo {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#titleRodada {
+    text-align: center;
+}
+.btn-group {
+    position: fixed;
+    width: 100%;
+    margin-left: 91.8%;
+}

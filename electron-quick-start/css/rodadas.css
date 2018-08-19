@@ -1,0 +1,32 @@
+table {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+}
+.titulo {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.btn-group {
+    position: fixed;
+    width: 100%;
+    margin-left: 91.8%;
+}
+.navbar-brand {
+    margin-left: 45%;
+}
