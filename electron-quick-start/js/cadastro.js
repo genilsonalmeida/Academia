@@ -39,7 +39,8 @@ var corpo = document.getElementById('corpo');
 function adicionar(tbRobos){
     var robo = JSON.stringify({
         Nome   : $("#inputRobo").val(),
-        Equipe     : $("#inputEquipe").val()
+        Equipe     : $("#inputEquipe").val(),
+        Pontos : 0
     });
     tbRobos.push(robo);
     localStorage.setItem("tbRobos", JSON.stringify(tbRobos));

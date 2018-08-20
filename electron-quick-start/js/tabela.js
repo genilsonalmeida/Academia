@@ -30,7 +30,7 @@ function listar(tbRobos){
         $("#tblListar tbody").append("<td>"+cont+"</td>");
         $("#tblListar tbody").append("<td>"+r.Nome+"</td>");
         $("#tblListar tbody").append("<td>"+r.Equipe+"</td>");
-        $("#tblListar tbody").append("<td>0</td>");
+        $("#tblListar tbody").append("<td>"+r.Pontos+"</td>");
         $("#tblListar tbody").append("</tr>");
     }
 }

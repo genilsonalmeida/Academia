@@ -20,18 +20,22 @@ th {
 }
 #divLuEsquerda {
     float: left;
-    width: 30%;
+    width: 40%;
     text-align: center;
+    margin-top: 6%;
+    margin-left: 5%;
 }
 #divLuCentro {
     float: center;
-    width: 40%;
+    width: 80%;
     text-align: center;
 }
 #divLuDireita {
     float: right;
-    width: 30%;
+    width: 40%;
     text-align: center;
+    margin-top: 6%;
+    margin-right: 5%;
 }
 .titulo {
     border-bottom-style: solid;
@@ -47,4 +51,35 @@ th {
     position: fixed;
     width: 100%;
     margin-left: 91.8%;
+}
+#placarUm {
+    width: 7%;
+    text-align: center;
+    display: inline-block;
+}
+#placarDois {
+    width: 7%;
+    text-align: center;
+    display: inline-block;
+}
+#lblUm {
+    display: inline-block;
+    margin-right: 3%;
+    font-size: 300%;
+    font-weight: bold;
+}
+#lblDois {
+    display: inline-block;
+    margin-left: 3%;
+    font-size: 300%;
+    font-weight: bold;
+}
+#versus {
+    display: inline-block;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+#btnPlacar {
+    margin-left: 45.5%;
+    margin-top: 4%;
 }
