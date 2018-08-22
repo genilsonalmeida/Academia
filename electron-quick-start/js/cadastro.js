@@ -95,6 +95,6 @@ function finalizar()
 var r=confirm("Deseja mesmo finalizar o cadastro?");
 if (r==true)
   {
-  location.href="./tabela.html";
+    location.href="./gerar.html";
   }
 }

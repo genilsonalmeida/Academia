@@ -65,7 +65,11 @@ function excluir(tbRobos, indice_selecionado){
 }
 
 function listar(tbRobos){
-    $("#tblListar").html("");
+    var r = JSON.parse(tbRobos[0]);
+    var r1 = JSON.parse(tbRobos[1]);
+    $("#lblUm").html(r.Nome);
+    $("#lblDois").html(r1.Nome);
+    
     $("#tblListar").html(
         "<thead>"+
         "   <tr>"+
@@ -78,6 +82,7 @@ function listar(tbRobos){
         "<tbody>"+
         "</tbody>"
     );
+    $("#tblListar").val
     for(var i in tbRobos){
         var r = JSON.parse(tbRobos[i]);
         $("#tblListar tbody").append("<tr>");

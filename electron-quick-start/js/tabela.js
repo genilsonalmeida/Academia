@@ -4,7 +4,7 @@ $(function(){
     if(tbRobos == null){ // Caso não haja conteúdo, iniciamos um vetor vazio
         tbRobos = [];
     }
-
+    //var nomeRobos = new Array();
     listar(tbRobos);
 });
 
@@ -33,4 +33,22 @@ function listar(tbRobos){
         $("#tblListar tbody").append("<td>"+r.Pontos+"</td>");
         $("#tblListar tbody").append("</tr>");
     }
+    //gerarBatalha(tbRobos);
 }
+
+/*function gerarRodada(){
+    var batalha = JSON.stringify({
+        Lutador1   : r.Nome,
+        Lutador2     : r.Nome
+    });
+    tbRodada.push(batalha);
+    localStorage.setItem("tbRodada", JSON.stringify(tbRodada));
+    return true;
+}
+
+function gerarBatalha(tbRobos){
+    for(var a = 0; a < tbRobos.length; a++){
+        var r = JSON.parse(tbRobos[a]);
+        nomeRobos.push(r.Nome);
+    }
+}*/
