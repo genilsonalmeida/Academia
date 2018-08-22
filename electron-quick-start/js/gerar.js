@@ -1,4 +1,11 @@
 $(function(){
+
+    var rodada = localStorage.getItem("rodada");
+    rodada = JSON.parse(rodada);
+    if(rodada == null){ // Caso não haja conteúdo, iniciamos um vetor vazio
+        rodada = [];
+    }
+
     var batalhas = localStorage.getItem("batalhas");
     batalhas = JSON.parse(batalhas);
     if(batalhas == null){ // Caso não haja conteúdo, iniciamos um vetor vazio
@@ -22,8 +29,37 @@ $(function(){
             }
         }
     }
-
+    
+    for(var i = 0; i < batalhas.length; i++){
+        var bat = JSON.parse(batalhas[i]);
+        var batalha = JSON.stringify({
+            Batalha : bat
+        });
+        if(verificarRodada(batalha,rodada)){
+            rodada.push(batalha);
+            localStorage.setItem("rodada", JSON.stringify(rodada));
+        }
+    }
+    
 });
+
+function verificarRodada(batalha, rodada){
+    var analise = true;
+    batalha = JSON.parse(batalha);
+    console.log(batalha);
+    for(var i = 0; i < rodada.length; i++){
+        var b = JSON.parse(rodada[i]);
+        console.log(b);
+        if((batalha.Batalha.Robo1 == b.Batalha.Robo1) || (batalha.Batalha.Robo1 == b.Batalha.Robo2)){
+            analise = false;
+            break;
+        } else {
+            analise = true;
+        }
+    }
+    console.log(analise);
+    return analise;
+}
 
 function adicionar(batalhas, r, r2){
     var batalha = JSON.stringify({
