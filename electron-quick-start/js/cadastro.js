@@ -34,8 +34,6 @@ $(function(){
     });
 });
 
-var corpo = document.getElementById('corpo');
-
 function adicionar(tbRobos){
     var robo = JSON.stringify({
         Nome   : $("#inputRobo").val(),
