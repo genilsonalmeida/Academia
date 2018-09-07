@@ -1,64 +1,55 @@
-$(function(){
-    var rodada = localStorage.getItem("rodada");
-    rodada = JSON.parse(rodada);
-
-    var batalhas = localStorage.getItem("batalhas");
-    batalhas = JSON.parse(batalhas);
+$(function () {
 
     var tbRobos = localStorage.getItem("tbRobos");// Recupera os dados armazenados
     tbRobos = JSON.parse(tbRobos); // Converte string para objeto
-    if(tbRobos == null){ // Caso não haja conteúdo, iniciamos um vetor vazio
+    if (tbRobos == null) { // Caso não haja conteúdo, iniciamos um vetor vazio
         tbRobos = [];
     }
 
-    listar(tbRobos,batalhas, rodada);
+    var batalhas = localStorage.getItem("batalhas");
+    batalhas = JSON.parse(batalhas);
+    if (batalhas == null) { // Caso não haja conteúdo, iniciamos um vetor vazio
+        batalhas = [];
+    }
+
+    listar(tbRobos, batalhas);
 });
 
-let cont = 0;
-function listar(tbRobos, batalhas, rodada){
+function listar(tbRobos, batalhas) {
+    var nome1;
+    var nome2;
     $("#tblListar").html("");
     $("#tblListar").html(
-        "<thead>"+
-        "   <tr>"+
-        "   <th>Rodada 1</th>"+
-        "   </tr>"+
-        "</thead>"+
-        "<tbody>"+
+        "<thead>" +
+        "   <tr>" +
+        "   </tr>" +
+        "</thead>" +
+        "<tbody>" +
         "</tbody>"
     );
-
-
-    for (var i = 0; i < rodada.length; i++) {
-        var r = JSON.parse(rodada[i]);
+    for (var j = 0; j < (batalhas.length / 2); j++) {
         $("#tblListar tbody").append("<tr>");
-        $("#tblListar tbody").append("<td>"+r.Batalha.Robo1+"</td>");
-        $("#tblListar tbody").append("<td>0</td>");
-        $("#tblListar tbody").append("<td>"+"X"+"</td>");
-        $("#tblListar tbody").append("<td>0</td>");
-        $("#tblListar tbody").append("<td>"+r.Batalha.Robo2+"</td>");
+        $("#tblListar tbody").append("<h3>Rodadas " + (j + 1) + "</h3>");
         $("#tblListar tbody").append("</tr>");
-    }
-
-
-    $("#tblListar2").html("");
-    $("#tblListar2").html(
-        "<thead>"+
-        "   <tr>"+
-        "   <th>Todas Batalhas</th>"+
-        "   </tr>"+
-        "</thead>"+
-        "<tbody>"+
-        "</tbody>"
-    );
-    for (var i = 0; i < batalhas.length; i++) {
-        var r = JSON.parse(batalhas[i]);
-        $("#tblListar2 tbody").append("<tr>");
-        $("#tblListar2 tbody").append("<td>"+r.Robo1+"</td>");
-        $("#tblListar2 tbody").append("<td>0</td>");
-        $("#tblListar2 tbody").append("<td>"+"X"+"</td>");
-        $("#tblListar2 tbody").append("<td>0</td>");
-        $("#tblListar2 tbody").append("<td>"+r.Robo2+"</td>");
-        $("#tblListar2 tbody").append("</tr>");
-    }
         
+        for (var i = 0; i < batalhas.length; i++) {
+            var bat = JSON.parse(batalhas[i]);
+            for(var a = 1; a < batalhas.length; a++){
+                var bat2 = JSON.parse(batalhas[a]);
+                if ((bat.Robo1 != bat2.Robo1 && bat.Robo1 != bat2.Robo2) && (bat.Robo2 != bat2.Robo1 && bat.Robo2 != bat2.Robo2)) {
+                //if (nome1 != bat.Robo1 || nome2 != bat.Robo2) {
+                    $("#tblListar tbody").append("<tr>");
+                    $("#tblListar tbody").append("<td>" + bat.Robo1 + "</td>");
+                    $("#tblListar tbody").append("<td>0</td>");
+                    $("#tblListar tbody").append("<td>" + "X" + "</td>");
+                    $("#tblListar tbody").append("<td>0</td>");
+                    $("#tblListar tbody").append("<td>" + bat.Robo2 + "</td>");
+                    $("#tblListar tbody").append("</tr>");
+                } else {
+                    continue;
+                }
+            }
+        }
+    }
+
 }

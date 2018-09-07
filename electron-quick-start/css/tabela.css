@@ -30,3 +30,20 @@ th {
     width: 100%;
     margin-left: 91.8%;
 }
+#divLutas{
+    position: relative;
+    margin-top: 3%;
+    border-style: solid; 
+    width: 800px;
+    margin-left: 3%;
+    float: left;
+}
+#divTabela{
+    position: relative;
+    margin-top: 3%;
+    border-style: solid;
+    width: 600px;
+    left: 0px;
+    margin-right: 2%;
+    float: right;
+}
