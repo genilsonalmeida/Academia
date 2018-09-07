@@ -66,11 +66,11 @@ function lutas(tbRobos, batalhas) {
                 if ((bat.Robo1 != bat2.Robo1 && bat.Robo1 != bat2.Robo2) && (bat.Robo2 != bat2.Robo1 && bat.Robo2 != bat2.Robo2)) {
                     if (nome1 != bat.Robo1 || nome2 != bat.Robo2) {
                         $("#tblLutas tbody").append("<tr>");
-                        $("#tblLutas tbody").append("<td>" + bat.Robo1 + "</td>");
-                        $("#tblLutas tbody").append("<td>0</td>");
+                        $("#tblLutas tbody").append("<td id='primeiroPlacar'>" + bat.Robo1 + "</td>");
+                        $("#tblLutas tbody").append("<td id='placar1'><input type='text' name='placarUm' class='form-control' id='placarUm' placeholder='0' required></td>");
                         $("#tblLutas tbody").append("<td>" + "X" + "</td>");
-                        $("#tblLutas tbody").append("<td>0</td>");
-                        $("#tblLutas tbody").append("<td>" + bat.Robo2 + "</td>");
+                        $("#tblLutas tbody").append("<td id='placar2'><input type='text' name='placarUm' class='form-control' id='placarDois' placeholder='0' required></td>");
+                        $("#tblLutas tbody").append("<td id='segundoPlacar'>" + bat.Robo2 + "</td>");
                         $("#tblLutas tbody").append("</tr>");
                         nome1 = bat.Robo1;
                         nome2 = bat.Robo2;

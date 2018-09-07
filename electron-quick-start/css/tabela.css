@@ -47,3 +47,23 @@ th {
     margin-right: 2%;
     float: right;
 }
+#primeiroPlacar{
+    width: 35%;
+}
+#segundoPlacar{
+    width: 35%;
+}
+#placarUm{
+    margin-left: 30%;
+    width: 42%;
+}
+#placarDois{
+    margin-left: 30%;
+    width: 42%;
+}
+#placar1{
+    width: 14%;
+}
+#placar2{
+    width: 14%;
+}
